@@ -2,22 +2,16 @@
 using namespace std;
 
 int main() {
-  int i;
-  int n = 10;
-  bool isPrime = true;
+  int n = 4;
+  char ch = 'A';
 
-  for ( i = 2; i < n-1; i++){
-    if (n % i == 0){
-      isPrime = false;
-      break;
+  for (int i = 1; i <= n;i++){
+    for (int j = 1; j <= i;j++){
+      cout << ch;
+      ch++;
     }
+    cout << endl;
   }
-
-  if(isPrime){
-    cout << "it is a prime number" << endl;
-  } else{
-    cout << "it is not a prime number" << endl;
-  }
-
+  
   return 0;
 }
