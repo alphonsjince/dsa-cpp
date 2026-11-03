@@ -1,14 +1,28 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  int a = 10;
-  int *ptr = &a;
+// void changeA(int *ptr){
+//   *ptr = 20;
+//   cout << *ptr << "\n";
+// }
+// int main() {
+//   int a = 10;
+//   changeA(&a);
 
-  cout << ptr << "\n";
-  cout << *ptr << "\n";
+//   cout << a << "\n";
+//   return 0;
+// }
 
-  *ptr = 20;
-  cout << a;
+void changeA(int &param){
+  param = 20;
+  cout << param << "\n";
+}
+
+int main(){
+  int a = 5;
+  changeA(a);
+
+  cout << a << "\n";
+
   return 0;
 }
