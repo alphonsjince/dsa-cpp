@@ -2,16 +2,14 @@
 using namespace std;
 
 int main() {
-  int n = 4;
-  char ch = 'A';
+  int a = 10;
+  int *ptr = &a;
 
-  for (int i = 1; i <= n;i++){
-    for (int j = 1; j <= i;j++){
-      cout << ch;
-      ch++;
-    }
-    cout << endl;
-  }
-  
+  float pi = 3.14;
+  float *ptr2 = &pi;
+
+  cout << &a << " = " << ptr << "\n";
+  cout << &pi << " = " << ptr2 << "\n";
+
   return 0;
 }
