@@ -1,34 +1,19 @@
 #include <iostream>
 using namespace std;
 
+void printArr(int nums[],int n){
+  for (int i = 0; i < n; i++){
+    cout << nums[i] << ", ";
+  }
+  cout << endl;
+}
 
 int main(){
-  int n;
-  cout << "enter length of array: ";
-  cin >> n;
+  int arr[] = {1, 2, 3, 4, 5};
+  int n = sizeof(arr) / sizeof(int);
 
-  int arr[n];
+  cout << "array size= " << sizeof(arr) << endl;
+  printArr(arr,n);
 
-  // int n = sizeof(arr) / sizeof(int);
-
-  cout << "Enter the elements of arr";
-  for (int i = 0; i < n; i++)
-  {
-    cin >> arr[i];
-  }
-
-  int max = arr[0];
-  int min = arr[0];
-
-  for (int i = 0; i < n;i++){
-    if(arr[i]>max){
-      max = arr[i];
-    }
-    if(arr[i]<min){
-      min = arr[i];
-    }
-  }
-  cout << "largest : " << max << endl;
-  cout << "smallest: " << min << endl;
   return 0;
 }
