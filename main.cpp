@@ -1,32 +1,34 @@
 #include <iostream>
 using namespace std;
 
-void multiplyBy2(int &a, int &b , int &c){
-  a *= 2;
-  b *= 2;
-  c *= 2;
-}
 
 int main(){
-  // int x;
-  // int *ptr;
-  // x = 7;
-  // ptr = &x;
-  // cout << *ptr << "\n";
+  int n;
+  cout << "enter length of array: ";
+  cin >> n;
 
-  // int x = 1, y = 2, z = 3;
-  // multiplyBy2(x, y, z);
-  // cout << x << y << z << "\n";
+  int arr[n];
 
-  //  q3:
-  int a = 32;
-  int *ptr = &a;
+  // int n = sizeof(arr) / sizeof(int);
 
-  char ch = 'A';
-  char &cho = ch;
+  cout << "Enter the elements of arr";
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
+  }
 
-  cho += a;
-  *ptr += ch;
-  cout << a << ", " << ch << endl;
+  int max = arr[0];
+  int min = arr[0];
+
+  for (int i = 0; i < n;i++){
+    if(arr[i]>max){
+      max = arr[i];
+    }
+    if(arr[i]<min){
+      min = arr[i];
+    }
+  }
+  cout << "largest : " << max << endl;
+  cout << "smallest: " << min << endl;
   return 0;
 }
