@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void printArr(int nums[],int n){
+int linearSearch(int *arr, int n, int key){
   for (int i = 0; i < n; i++){
-    cout << nums[i] << ", ";
+    if(arr[i]==key){
+      return i;
+    }
   }
-  cout << endl;
+  return -1;
 }
 
 int main(){
-  int arr[] = {1, 2, 3, 4, 5};
+  int arr[] = {2, 4, 6, 8, 10, 12};
   int n = sizeof(arr) / sizeof(int);
 
-  cout << "array size= " << sizeof(arr) << endl;
-  printArr(arr,n);
-
+  cout << linearSearch(arr, n, 10) << endl;
   return 0;
 }
